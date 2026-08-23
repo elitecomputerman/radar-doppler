@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Doppler - El radar meteorologico</title>
+    
+    <!-- 1. IMPORTAR GOOGLE FONTS (Poppins para títulos y Roboto para párrafos) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght=600;700&family=Roboto:wght=400;500&display=swap" rel="stylesheet">
+
+    <!-- 2. IMPORTAR FONT AWESOME (Para los iconos) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- 3. VÍNCULO AL CSS EXTERNO -->
+    <link rel="stylesheet" href="doppler.css">
+
+    <!-- 4. CSS INTERNO (Para estilos específicos - Requisito Obligatorio) -->
+    <style>
+        /* Sombra especial para que el título del radar resalte en la tormenta */
+        .titulo-principal {
+            color: #f74904;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+            font-size: 2.8rem;
+        }
+
+        /* Color azul eléctrico para el botón del radar */
+        .btn-tarjeta {
+            background-color: #00d2d3;
+            color: #1e272e;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-tarjeta:hover {
+            background-color: #01a3a4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN HORIZONTAL -->
+    <header class="header-navegacion">
+        <div class="logo"><i class="fa-solid fa-radar"></i> GeoRadar</div>
+        <nav>
+            <ul class="nav-links">
+                <!-- LO NUEVO: Enlaces a páginas web reales -->
+                <li><a href="https://wikipedia.org" target="_blank">¿Qué es?</a></li>
+                <li><a href="https://noaa.gov" target="_blank">Cómo funciona</a></li>
+                <li><a href="https://meteored.com.ar" target="_blank">Alertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL (Flexbox) -->
+    <main class="contenedor-principal">
+        
+        <h1 class="titulo-principal">El Poder del Radar Doppler</h1>
+        <p>La tecnología que ve a través de las tormentas en tiempo real.</p>
+
+        <!-- TARJETA CON ICONO, IMAGEN POR CSS Y TEXTO -->
+        <div class="tarjeta">
+            <!-- Icono decorativo superior -->
+            <div class="icono-contenedor">
+                <i class="fa-solid fa-satellite-dish"></i>
+            </div>
+
+            <!-- Caja vacía que recibe la imagen desde el CSS -->
+            <div class="imagen-radar"></div>
+
+            <div class="tarjeta-contenido">
+                <h2>Rastreador de Clima</h2>
+                <p>Este radar mide el movimiento de las gotas de agua en el aire. ¡Así predice tornados, granizo y lluvias fuertes antes de que lleguen!</p>
+                
+                <!-- LO NUEVO: Enlace que envuelve al botón azul para ver el mapa en vivo -->
+                <a href="https://windy.com" target="_blank" style="text-decoration: none;">
+                    <button class="btn-tarjeta">Ver Mapa en Vivo</button>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
